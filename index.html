@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>INGRESO DE NOVEDAD</h1>
+
+<section>
+    <!--FECHA: fecha que ingresa la novedad-->
+    <div id="dateDiv" class="container">
+        <span class="spans">
+            <h4>Fecha del evento: </h4>
+            <input type="date" id="date">
+        </span>
+        
+    <!--HORA: hora que ingresa la novedad-->
+        <span class="spans">
+            <p>Hora del evento: </p>
+            <input type="time" id="time">
+        </span>    
+    
+    <!--Datos de la ubicacion Barrio Lote-->
+        <span class="spans">
+            <p>Nombre del barrio: </p>
+            <input type="text" id="barrio">    
+        </span>    
+        <span class="spans">
+            <p>N° de Lote: </p>
+            <input type="number" id="lote">    
+        </span>    
+    </div>
+
+
+    <!--EVENTOS: Suceso ocurrido-->
+    <div id="evenetoDiv">
+        <h3>Suceso ocurrido</h3>
+        <select id="evento">
+            <option value="Emergencia medica">Emergencia medica</option>
+            <option value="Incendio">Incendio</option>
+            <option value="Intrusion perimetral">Intrusion perimetral</option>
+            <option value="Intento de intrusion perimetral">Intento de intrusion perimetral</option>
+            <option value="Robo o hurto">Robo o hurto</option>
+            <option value="Extravio de menor">Extravio de menor</option>
+            <option value="Alteracion del orden interno">Alteracion del orden interno</option>
+            <option value="Intento de intrusion perimetral">Intento de intrusion perimetral</option>
+        </select>
+    </div>
+
+
+
+    <!--RECEPCION: por donde ingresa la novedad-->
+    <div id="recepcionDiv">
+        <h3>Por donde ingresa la novedad</h3>
+        <input type="text" id="recepcion">
+    </div>
+
+    <!--VICTIMA: Se debe obtener la mayor cantidad de datos, y especialmente el teléfono de la victima-->
+    <div id="victimaDiv">
+            <h3>Datos de la victima</h3>
+            <p>Nombre</p>
+            <input type="text" id="nombre">
+            <p>Apellido</p>
+            <input type="text" id="apellido">
+            <P>Telefono</P>
+            <input type="tel" id="telefono">          
+    </div>
+
+
+    <!--CAUSANTE: Cantidad de NN, si fueron aprehendidos o se dieron a la fuga o cualquier información de relevancia-->
+    <div id="causanteDiv">
+        <h3>Causantes</h3>
+        <p>Cantidad de NN</p>
+        <input type="number" id="cantidadNN">
+        <p>Estado de los NN</p>
+        <select id="estadoNN">
+            <option value="">No corresponde</option>
+            <option value="Fueron aprehendidos">Fueron aprehendidos</option>
+            <option value="Se dieron a la fuga">Se dieron a la fuga</option>
+        </select>
+    </div>
+
+
+    <!--RELATO DEL HECHO: Se debe describir el hecho con la mayor cantidad de datos posibles y con buena redacción.-->
+    <div id="relatoDiv">
+        <h3>Breve descripcion del hecho</h3>
+        <textarea id="relato" cols="80" rows="10"></textarea>
+    </div>
+
+
+    <!--CAMARAS: Se debe detallar cámaras en el lugar y en la zona.-->
+    <div id="camarasDiv">
+    <h3>Camaras o domos en el sector</h3>
+    <p>Nomobre/Referencia de la camara</p>   
+    <input type="text" id="camara1">
+    <p>Nomobre/Referencia de la camara</p>   
+    <input type="text" id="camara2">
+    <p>Nomobre/Referencia de la camara</p>   
+    <input type="text" id="camara3">  
+    </div>
+
+    <!--FOTOS: Se debe aportar junto a la novedad fotos que representen la novedad informada-->
+    <div id="fotosDiv">
+        <h3>Desea agregar fotos: </h3>
+        <input type="file" id="fotos">  
+    </div>
+
+    <div id="firmaDiv">
+        <p>Quien suscribe: </p>
+        <input type="text" id="firma">
+    </div>    
+</section>
+
+<div id="boton" class="container">
+    <button id="botonDescargarPDF" onclick="descargarPDF()">Descargar PDF</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
