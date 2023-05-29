@@ -88,14 +88,16 @@
     <!--CAUSANTE: Cantidad de NN, si fueron aprehendidos o se dieron a la fuga o cualquier información de relevancia-->
     <div id="causanteDiv">
         <h3>Causantes</h3>
-        <p>Cantidad de NN</p>
-        <input type="number" id="cantidadNN" placeholder="Ingrese cantidad de NN">
-        <p>Estado de los NN</p>
         <select id="estadoNN">
-            <option value="">No corresponde</option>
+            <option value="No">No corresponde</option>
             <option value="Fueron aprehendidos">Fueron aprehendidos</option>
             <option value="Se dieron a la fuga">Se dieron a la fuga</option>
         </select>
+        <div id="NN" hidden>
+            <p>Cantidad de NN</p>
+            <input type="number" id="cantidadNN" placeholder="Ingrese cantidad de NN">
+        </div>
+        
     </div>
 
 

@@ -91,6 +91,11 @@ img {
     height: 100%;
 }
 
+textarea {
+    width: 100%;
+    height: auto;
+}
+
 .fotoDiv {
     margin: 0;
     padding: 0;

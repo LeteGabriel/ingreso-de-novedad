@@ -1,3 +1,15 @@
+const estadoNN = document.getElementById('estadoNN');
+
+estadoNN.addEventListener("change", function() {
+  const NN = document.getElementById('NN');
+  if (estadoNN.value === "Fueron aprehendidos" || estadoNN.value === "Se dieron a la fuga") {
+      NN.style.display = "block";
+    } else if (estadoNN.value === "No") {
+      NN.style.display = "none";
+    }
+});
+
+
 function descargarPDF() {
     const element = document.body;
     const botonDescargarPDF = document.getElementById("botonDescargarPDF");
@@ -69,3 +81,5 @@ function descargarPDF() {
       vistaPrevia3.innerHTML = "No se seleccionó ninguna foto";
     }
   }
+
+
