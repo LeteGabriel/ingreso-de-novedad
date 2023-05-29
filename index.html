@@ -109,18 +109,23 @@
     <!--CAMARAS: Se debe detallar cámaras en el lugar y en la zona.-->
     <div id="camarasDiv">
     <h3>Camaras o domos en el sector</h3>
-    <p>Nomobre/Referencia de la camara</p>   
+    <p>Nombre/Referencia de la camara</p>   
     <input type="text" id="camara1">
-    <p>Nomobre/Referencia de la camara</p>   
+    <p>Nombre/Referencia de la camara</p>   
     <input type="text" id="camara2">
-    <p>Nomobre/Referencia de la camara</p>   
+    <p>Nombre/Referencia de la camara</p>   
     <input type="text" id="camara3">  
     </div>
 
     <!--FOTOS: Se debe aportar junto a la novedad fotos que representen la novedad informada-->
     <div id="fotosDiv">
         <h3>Desea agregar fotos: </h3>
-        <input type="file" id="fotos">  
+        <input type="file" accept="image/*" id="inputFoto" multiple onchange="mostrarFoto(event)">
+        <input type="file" accept="image/*" id="inputFoto2" multiple onchange="mostrarFoto2(event)">
+        <input type="file" accept="image/*" id="inputFoto3" multiple onchange="mostrarFoto3(event)">
+    <div id="vistaPrevia" class="fotoDiv" hidden></div>
+    <div id="vistaPrevia2" class="fotoDiv" hidden></div>
+    <div id="vistaPrevia3" class="fotoDiv" hidden></div>
     </div>
 
     <div id="firmaDiv">
