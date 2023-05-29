@@ -1,9 +1,24 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: #fff;
 }
 
-h1, h3 {
+body {
+    padding-top: 30px;
+    padding-left: 5px;
+
+}
+
+h1 {
+    padding-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #aa6600;
+
+}
+
+h3 {
     font-size: 1rem;
     font-weight: 900;
     color: #aa6600;
@@ -11,21 +26,22 @@ h1, h3 {
 
 div {
     border: 3px solid grey;
-    width: 95%;
+    width: 80%;
     padding: 5px;
     margin: 5px;
 }
-
 
 .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    justify-items: center;
 }
 
 #dateDiv {
     flex-direction: column;
-    width: 100%;
+    width: 80%;
+
 }
 
 #firmaDiv {
@@ -44,7 +60,7 @@ button {
 
 .spans {
     border: 2px solid grey;
-    width: 80%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -52,10 +68,11 @@ button {
 }
 
 #recepcion {
-    width: 50%;
+    width: 100%;
 }
 
 #firmaDiv p {
+
     font-size: 2rem;
     margin-right: 10px;
 }
@@ -64,6 +81,11 @@ button {
     font-size: 1em;
 }
 
-#nombre, #apellido {
- width: 30%;   
+#firmaDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#nombre, #apellido, #telefono {
+ width: 100%;   
 }
