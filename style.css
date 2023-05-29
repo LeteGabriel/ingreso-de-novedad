@@ -16,10 +16,15 @@ div {
     margin: 5px;
 }
 
+
 .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+#dateDiv {
+    flex-direction: column;
 }
 
 #firmaDiv {
@@ -38,10 +43,10 @@ button {
 
 .spans {
     border: 2px solid grey;
-    width: 20%;
-    height: 30px;
+    width: 80%;
+    height: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
