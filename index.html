@@ -7,11 +7,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Informe de novedad</title>
 </head>
 <body>
 
-<h1>INGRESO DE NOVEDAD</h1>
+    <div id="tit">
+        <img src="fidelis.png" alt="Logo de la empresa" id="Logo">
+        <h1>INGRESO DE NOVEDAD</h1>
+    </div>
 
 <section>
     <!--FECHA: fecha que ingresa la novedad-->
@@ -43,6 +46,12 @@
                 <option value="El encuentro">El encuentro</option>
                 <option value="Santa Maria de Tigre">Santa Maria de Tigre</option>
                 <option value="San Matias">San Matias</option>
+                <option value="Altos del encuentro">Altos del encuentro</option>
+                <option value="Casas de Santa Maria">Casas de Santa Maria</option>
+                <option value="Casas de Santa Ana">Casas de Santa Ana</option>
+                <option value="Casas de San Patricio">Casas de San Patricio</option>
+                <option value="San Fermin">San Fermin</option>
+                <option value="Oliden Joven">Oliden Joven</option>
             </select>    
         </span>    
         <span class="spans">
@@ -51,11 +60,11 @@
         </span>    
     </div>
 
-
     <!--EVENTOS: Suceso ocurrido-->
     <div id="evenetoDiv">
         <h3>Suceso ocurrido</h3>
         <select id="evento">
+            <option value="none">Elija el tipo de evento</option>
             <option value="Emergencia medica">Emergencia medica</option>
             <option value="Incendio">Incendio</option>
             <option value="Intrusion perimetral">Intrusion perimetral</option>
@@ -63,8 +72,144 @@
             <option value="Robo o hurto">Robo o hurto</option>
             <option value="Extravio de menor">Extravio de menor</option>
             <option value="Alteracion del orden interno">Alteracion del orden interno</option>
-            <option value="Intento de intrusion perimetral">Intento de intrusion perimetral</option>
         </select>
+    </div>
+
+    
+    <div id="emergenciaMedica" hidden>
+        <div id="pacienteDiv">
+            <h3>Datos del paciente</h3>
+            <p>Nombre</p>
+            <input type="text" id="nombre" placeholder="Nombre del paciente">
+            <p>Apellido</p>
+            <input type="text" id="apellido" placeholder="Apellido del paciente">
+            <P>Sintomas</P>
+            <input type="text" id="sintomas" placeholder="Sintomas del paciente">
+            <P>Edad Aproximada</P>
+            <input type="text" id="edad" placeholder="Edad del paciente">
+            <P>Sexo</P>
+            <select id="sexo">
+                <option value="Mujer">Mujer</option>
+                <option value="Hombre">Hombre</option>
+                <option value="No binario">No binario</option>
+            </select>
+        </div>   
+        <div id="Ambulancia">
+            <h3>Datos de la ambulancia</h3>
+            <p>Horario de entrada</p>
+            <input type="time">
+            <p>Empresa ambulancia</p>
+            <input type="text">
+            <p>Patente ambulancia</p>
+            <input type="text">
+            <p>Horario salida</p>
+            <input type="time">
+        </div> 
+        <div id="prognosis">
+            <h3>Prognosis</h3>
+            <textarea cols="30" rows="10" placeholder="Ingrese la prognosis del paciente"></textarea>
+        </div>
+    </div>
+
+    <div id="incendio" hidden>
+        <h3>Datos de los bomberos</h3>
+        <p>Horario de entrada</p>
+        <input type="time">
+        <p>Cuartel de bomberos</p>
+        <input type="text">
+        <p>Patente de bomberos</p>
+        <input type="text">
+        <p>Horario salida</p>
+        <input type="time">
+    </div>
+
+    <div id="intrusion" hidden>
+        <h3>Detalle de la intrusion</h3>
+        <p>Por donde se produce la intrusion</p>
+        <input type="text" placeholder="Ingrese lote o sector">
+        <p>Cuantos NN ingresan</p>
+        <input type="number" placeholder="Ingrese la cantidad de NN">
+        <p>Situacion de los NN</p>
+        <select>
+            <option value="">Seleccione una opcion</option>
+            <option value="">Fueron aprehendidos</option>
+            <option value="">Se dieron a la fuga</option>
+            <option value="">Se desconoce el paradero</option>
+        </select>
+        
+    </div>
+
+    <div id="intentoIntrusion" hidden>
+        <h3>Detalle del intento de intrusion</h3>
+        <p>Por donde se produce el intento de intrusion</p>
+        <input type="text" placeholder="Ingrese lote o sector">
+        <p>Cuantos NN se detectan</p>
+        <input type="number" placeholder="Ingrese la cantidad de NN">
+        <p>Situacion de los NN</p>
+        <select>
+            <option value="">Seleccione una opcion</option>
+            <option value="">Fueron aprehendidos</option>
+            <option value="">Se dieron a la fuga</option>
+            <option value="">Se desconoce el paradero</option>
+        </select>
+    </div>
+
+    <div id="robo" hidden>
+        <h3>Detalles del robo/hurto</h3>
+        <p>Denunciante</p>
+        <input type="text" placeholder="Quien informa el ilicito">
+        <p>Faltantes</p>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese los elementos faltantes"></textarea>
+        <p>Donde se encontraban los elementos</p>
+        <input type="text" placeholder="Lugar/sector">
+    </div>
+    
+    <div id="extravioMenor" hidden>
+        <h3>Detalles del menor</h3>
+        <p>Edad del menor</p>
+        <input type="number" placeholder="Ingresa la edad del menor">
+        <p>Descripcion del menor</p>
+        <textarea cols="30" rows="10" placeholder="Breve descripcion del menor"></textarea>
+        <p>Situacion del extravio</p>
+        <select>
+            <option value="">Elija una opcion</option>
+            <option value="">Fue encontrado</option>
+            <option value="">Se continua la busqueda</option>
+        </select>
+        <p>Se involucro la policia</p>
+        <select>
+            <option value="">Seleccione una opcion</option>
+            <option value="">Si, por desicion del padre/tutor</option>
+            <option value="">No, por desicion del padre/tutor</option>
+        </select>
+    </div>
+
+    <div id="alteracion" hidden>
+        <h3>Situacion</h3>
+        <select id="altInter">
+            <option value="No">Elija una opcion</option>
+            <option value="May">Discusion entre personas adultas</option>
+            <option value="Men">Discusion entre menores</option>
+            <option value="May">Agresion a un bien</option>
+        </select>
+    </div>
+
+    <div id="Menores" hidden>
+        <h3>Acciones realizadas</h3>
+        <select id="observaciones">
+            <option value="">Seleccione una opcion</option>
+            <option value="">Se llamo a los padres</option>
+            <option value="">No se llamo a los padres</option>
+            <option value="obs">Se especifica en observaciones</option>
+        </select>
+            <div id="divObs" hidden>
+                <p>Observaciones</p>
+                <textarea cols="30" rows="10" placeholder="Observaciones"></textarea>
+            </div>
+            
+    </div>
+    <div id="Mayores" hidden>
+
     </div>
 
     <!--RECEPCION: por donde ingresa la novedad-->
@@ -75,17 +220,17 @@
 
     <!--VICTIMA: Se debe obtener la mayor cantidad de datos, y especialmente el teléfono de la victima-->
     <div id="victimaDiv">
-            <h3>Datos de la victima</h3>
+            <h3>Datos de la persona afectada</h3>
             <p>Nombre</p>
-            <input type="text" id="nombre" placeholder="Nombre de la victima">
+            <input type="text" id="nombre" placeholder="Ingrese el nombre">
             <p>Apellido</p>
-            <input type="text" id="apellido" placeholder="Apellido de la victima">
+            <input type="text" id="apellido" placeholder="Ingrese el apellido">
             <P>Telefono</P>
-            <input type="tel" id="telefono" placeholder="Telefono de la victima">          
+            <input type="tel" id="telefono" placeholder="Ingrese el telefono">          
     </div>
 
 
-    <!--CAUSANTE: Cantidad de NN, si fueron aprehendidos o se dieron a la fuga o cualquier información de relevancia-->
+    <!--CAUSANTE: Cantidad de NN, si fueron aprehendidos o se dieron a la fuga o cualquier información de relevancia
     <div id="causanteDiv">
         <h3>Causantes</h3>
         <select id="estadoNN">
@@ -98,7 +243,7 @@
             <input type="number" id="cantidadNN" placeholder="Ingrese cantidad de NN">
         </div>
         
-    </div>
+    </div> -->
 
 
     <!--RELATO DEL HECHO: Se debe describir el hecho con la mayor cantidad de datos posibles y con buena redacción.-->

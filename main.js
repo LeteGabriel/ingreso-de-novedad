@@ -1,13 +1,108 @@
-const estadoNN = document.getElementById('estadoNN');
+/* Selecciona el tipo de evento y despliega el Div correspondiente*/
+const evento = document.getElementById('evento');
 
-estadoNN.addEventListener("change", function() {
-  const NN = document.getElementById('NN');
-  if (estadoNN.value === "Fueron aprehendidos" || estadoNN.value === "Se dieron a la fuga") {
-      NN.style.display = "block";
-    } else if (estadoNN.value === "No") {
-      NN.style.display = "none";
-    }
+evento.addEventListener("change", function () {
+  const emergenciaMedica = document.getElementById('emergenciaMedica');
+  const incendio = document.getElementById('incendio');
+  const intrusion = document.getElementById('intrusion');
+  const intentoInt = document.getElementById('intentoIntrusion');
+  const robo = document.getElementById('robo');
+  const extravio = document.getElementById('extravioMenor');
+  const alteracion = document.getElementById('alteracion');
+
+  if (evento.value === "none"){
+    emergenciaMedica.style.display = "";
+    incendio.style.display = "";
+    intrusion.style.display = "";
+    intentoInt.style.display = "";
+    robo.style.display = "";
+    extravio.style.display = "";
+    alteracion.style.display = "";
+  }else if (evento.value === "Emergencia medica") {
+    emergenciaMedica.style.display = "block";
+    incendio.style.display = "";
+    intrusion.style.display = "";
+    intentoInt.style.display = "";
+    robo.style.display = "";
+    extravio.style.display = "";
+    alteracion.style.display = "";
+  } else if (evento.value === "Incendio") {
+    incendio.style.display = "block";
+    emergenciaMedica.style.display = "";
+    intrusion.style.display = "";
+    intentoInt.style.display = "";
+    robo.style.display = "";
+    extravio.style.display = "";
+    alteracion.style.display = "";
+  } else if (evento.value === "Intrusion perimetral") {
+    intrusion.style.display = "block";
+    incendio.style.display = "";
+    emergenciaMedica.style.display = "";
+    intentoInt.style.display = "";
+    robo.style.display = "";
+    extravio.style.display = "";
+    alteracion.style.display = "";
+  }else if (evento.value === "Intento de intrusion perimetral") {
+    intrusion.style.display = "";
+    incendio.style.display = "";
+    emergenciaMedica.style.display = "";
+    intentoInt.style.display = "block";
+    robo.style.display = "";
+    extravio.style.display = "";
+    alteracion.style.display = "";
+  }else if (evento.value === "Robo o hurto") {
+    intrusion.style.display = "";
+    incendio.style.display = "";
+    emergenciaMedica.style.display = "";
+    intentoInt.style.display = "";
+    robo.style.display = "block";
+    extravio.style.display = "";
+    alteracion.style.display = "";
+  }else if (evento.value === "Extravio de menor") {
+    intrusion.style.display = "";
+    incendio.style.display = "";
+    emergenciaMedica.style.display = "";
+    intentoInt.style.display = "";
+    robo.style.display = "";
+    extravio.style.display = "block";
+    alteracion.style.display = "";
+  }else if (evento.value === "Alteracion del orden interno") {
+    intrusion.style.display = "";
+    incendio.style.display = "";
+    emergenciaMedica.style.display = "";
+    intentoInt.style.display = "";
+    robo.style.display = "";
+    extravio.style.display = "";
+    alteracion.style.display = "block";
+  }
 });
+
+const altInter = document.getElementById('altInter');
+
+altInter.addEventListener("change", function () {
+  const menores = document.getElementById('Menores');
+  const mayores = document.getElementById('Mayores');
+
+    if (altInter.value === "May") {
+      menores.style.display = "";
+      mayores.style.display = "block";
+    } else if (altInter.value === "Men") {
+      menores.style.display = "block";
+      mayores.style.display = "";
+    } else {
+      menores.style.display = "";
+      mayores.style.display = "";
+    }});
+
+const obs = document.getElementById('observaciones');
+obs.addEventListener("change", function () {
+  const divObs = document.getElementById('divObs');
+  if (obs.value === "obs") {
+    divObs.style.display = "block";
+  } else {
+    divObs.style.display = "";
+  }
+})
 
 
 function descargarPDF() {
