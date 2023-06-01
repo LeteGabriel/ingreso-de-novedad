@@ -10,7 +10,6 @@
     <title>Informe de novedad</title>
 </head>
 <body>
-
     <div id="tit">
         <img src="fidelis.png" alt="Logo de la empresa" id="Logo">
         <h1>INGRESO DE NOVEDAD</h1>
@@ -72,13 +71,15 @@
             <option value="Robo o hurto">Robo o hurto</option>
             <option value="Extravio de menor">Extravio de menor</option>
             <option value="Alteracion del orden interno">Alteracion del orden interno</option>
+            <option value="Reclamo de propietario">Reclamo de propietario</option>
         </select>
     </div>
 
     
     <div id="emergenciaMedica" hidden>
         <div id="pacienteDiv">
-            <h3>Datos del paciente</h3>
+            <h3>Emergencia medica</h3>
+            <p>Datos del paciente</p>
             <p>Nombre</p>
             <input type="text" id="nombre" placeholder="Nombre del paciente">
             <p>Apellido</p>
@@ -112,7 +113,8 @@
     </div>
 
     <div id="incendio" hidden>
-        <h3>Datos de los bomberos</h3>
+        <h3>Incendio</h3>
+        <p>Datos de los bomberos</p>
         <p>Horario de entrada</p>
         <input type="time">
         <p>Cuartel de bomberos</p>
@@ -124,7 +126,7 @@
     </div>
 
     <div id="intrusion" hidden>
-        <h3>Detalle de la intrusion</h3>
+        <h3>Intrusion perimetral</h3>
         <p>Por donde se produce la intrusion</p>
         <input type="text" placeholder="Ingrese lote o sector">
         <p>Cuantos NN ingresan</p>
@@ -140,7 +142,7 @@
     </div>
 
     <div id="intentoIntrusion" hidden>
-        <h3>Detalle del intento de intrusion</h3>
+        <h3>Intento de intrusion perimetral</h3>
         <p>Por donde se produce el intento de intrusion</p>
         <input type="text" placeholder="Ingrese lote o sector">
         <p>Cuantos NN se detectan</p>
@@ -155,7 +157,7 @@
     </div>
 
     <div id="robo" hidden>
-        <h3>Detalles del robo/hurto</h3>
+        <h3>Robo/hurto</h3>
         <p>Denunciante</p>
         <input type="text" placeholder="Quien informa el ilicito">
         <p>Faltantes</p>
@@ -165,7 +167,8 @@
     </div>
     
     <div id="extravioMenor" hidden>
-        <h3>Detalles del menor</h3>
+        <h3>Extravio de menor</h3>
+        <p>Datos del menor</p>
         <p>Edad del menor</p>
         <input type="number" placeholder="Ingresa la edad del menor">
         <p>Descripcion del menor</p>
@@ -185,7 +188,8 @@
     </div>
 
     <div id="alteracion" hidden>
-        <h3>Situacion</h3>
+        <h3>Alteracion del orden interno</h3>
+        <p>Situacion</p>
         <select id="altInter">
             <option value="No">Elija una opcion</option>
             <option value="May">Discusion entre personas adultas</option>
@@ -209,8 +213,25 @@
             
     </div>
     <div id="Mayores" hidden>
-
+        <h3>Descripcion de los hechos</h3>
+        <p>Ingrese el lugar</p>
+        <input type="text" placeholder="Ingrese lugar o sector">
+        <p>Involucrados</p>
+        <textarea cols="30" rows="10" placeholder="Ingrese datos de los involucrados"></textarea>
+        <p>Acciones realizadas</p>
+        <textarea cols="30" rows="10" placeholder="Ingrese acciones realizadas"></textarea>
     </div>
+
+    <div id="reclamos" hidden>
+        <h3>Reclamo de propietario</h3>
+        <p>Lote</p>
+        <input type="number" placeholder="Ingrese el lote">
+        <p>Descripcion del reclamo</p>
+        <textarea cols="30" rows="10" placeholder="Ingrese el detalle del reclamo"></textarea>
+        <p>Acciones realizadas</p>
+        <textarea cols="30" rows="10" placeholder="Ingrese acciones realizadas"></textarea>
+    </div>
+
 
     <!--RECEPCION: por donde ingresa la novedad-->
     <div id="recepcionDiv">
@@ -263,6 +284,29 @@
     <p>Nombre/Referencia de la camara</p>   
     <input type="text" id="camara3" placeholder="Ingrese referencia">  
     </div>
+
+    <!--Avisos-->
+    <div>
+        <h3>Comunicaciones / Avisos</h3>
+        <div>
+            <p>Supervisor</p>
+            <input type="text" placeholder="Ingrese Apellido y Nombre">
+        </div>
+        <div>
+            <p>Intendente</p>
+            <input type="text" placeholder="Ingrese Apellido y Nombre">
+        </div>
+        <div>
+            <p>Auditor</p>
+            <input type="text" placeholder="Ingrese Apellido y Nombre">
+        </div>
+        <div>
+            <p>Otras comunicaciones</p>
+            <textarea cols="30" rows="10" placeholder="Ingrese otras comunicaciones realizadas"></textarea>
+        </div>
+        
+    </div>
+
 
     <!--FOTOS: Se debe aportar junto a la novedad fotos que representen la novedad informada-->
     <div id="fotosDiv">

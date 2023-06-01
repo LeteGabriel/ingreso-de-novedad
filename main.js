@@ -9,6 +9,7 @@ evento.addEventListener("change", function () {
   const robo = document.getElementById('robo');
   const extravio = document.getElementById('extravioMenor');
   const alteracion = document.getElementById('alteracion');
+  const reclamos = document.getElementById('reclamos');
 
   if (evento.value === "none"){
     emergenciaMedica.style.display = "";
@@ -18,6 +19,7 @@ evento.addEventListener("change", function () {
     robo.style.display = "";
     extravio.style.display = "";
     alteracion.style.display = "";
+    reclamos.style.display = "";
   }else if (evento.value === "Emergencia medica") {
     emergenciaMedica.style.display = "block";
     incendio.style.display = "";
@@ -26,6 +28,7 @@ evento.addEventListener("change", function () {
     robo.style.display = "";
     extravio.style.display = "";
     alteracion.style.display = "";
+    reclamos.style.display = "";
   } else if (evento.value === "Incendio") {
     incendio.style.display = "block";
     emergenciaMedica.style.display = "";
@@ -34,6 +37,7 @@ evento.addEventListener("change", function () {
     robo.style.display = "";
     extravio.style.display = "";
     alteracion.style.display = "";
+    reclamos.style.display = "";
   } else if (evento.value === "Intrusion perimetral") {
     intrusion.style.display = "block";
     incendio.style.display = "";
@@ -42,6 +46,7 @@ evento.addEventListener("change", function () {
     robo.style.display = "";
     extravio.style.display = "";
     alteracion.style.display = "";
+    reclamos.style.display = "";
   }else if (evento.value === "Intento de intrusion perimetral") {
     intrusion.style.display = "";
     incendio.style.display = "";
@@ -50,6 +55,7 @@ evento.addEventListener("change", function () {
     robo.style.display = "";
     extravio.style.display = "";
     alteracion.style.display = "";
+    reclamos.style.display = "";
   }else if (evento.value === "Robo o hurto") {
     intrusion.style.display = "";
     incendio.style.display = "";
@@ -58,6 +64,7 @@ evento.addEventListener("change", function () {
     robo.style.display = "block";
     extravio.style.display = "";
     alteracion.style.display = "";
+    reclamos.style.display = "";
   }else if (evento.value === "Extravio de menor") {
     intrusion.style.display = "";
     incendio.style.display = "";
@@ -66,6 +73,7 @@ evento.addEventListener("change", function () {
     robo.style.display = "";
     extravio.style.display = "block";
     alteracion.style.display = "";
+    reclamos.style.display = "";
   }else if (evento.value === "Alteracion del orden interno") {
     intrusion.style.display = "";
     incendio.style.display = "";
@@ -74,6 +82,16 @@ evento.addEventListener("change", function () {
     robo.style.display = "";
     extravio.style.display = "";
     alteracion.style.display = "block";
+    reclamos.style.display = "";
+  } else if (evento.value === "Reclamo de propietario") {
+    intrusion.style.display = "";
+    incendio.style.display = "";
+    emergenciaMedica.style.display = "";
+    intentoInt.style.display = "";
+    robo.style.display = "";
+    extravio.style.display = "";
+    alteracion.style.display = "";
+    reclamos.style.display = "block";
   }
 });
 
