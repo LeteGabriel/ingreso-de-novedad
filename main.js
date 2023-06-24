@@ -95,6 +95,18 @@ evento.addEventListener("change", function () {
   }
 });
 
+
+const barrio = document.getElementById('barrio');
+
+barrio.addEventListener("change", function () {
+  const areaSS = document.getElementById('areaSS');
+
+    if (barrio.value === "San Sebastian") {
+      areaSS.style.display = "block";
+    } else areaSS.style.display = "";
+  });
+
+
 const altInter = document.getElementById('altInter');
 
 altInter.addEventListener("change", function () {
